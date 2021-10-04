@@ -1,0 +1,122 @@
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #333;
+    color: #fff;
+    line-height: 1.6;
+}
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity .4s ease-in-out;
+}
+
+.slide.current {
+    opacity: 1;
+}
+
+/* background img */
+.slide:first-child {
+    background: url('./img/slide1.jpg') no-repeat center center/cover;
+}
+
+.slide:nth-child(2) {
+    background: url('./img/slide2.jpg') no-repeat center center/cover;
+}
+
+.slide:nth-child(3) {
+    background: url('./img/slide3.jpg') no-repeat center center/cover;
+}
+
+.slide:nth-child(4) {
+    background: url('./img/slide4.jpg') no-repeat center center/cover;
+}
+
+.slide:nth-child(5) {
+    background: url('./img/slide5.jpeg') no-repeat center center/cover;
+}
+
+.slide:last-child {
+    background: url('./img/slide6.jpg') no-repeat center center/cover;
+}
+
+/* content */
+.slide .content {
+    position: absolute;
+    left: -600px;
+    bottom: 70px;
+    width: 600px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    padding: 35px;
+    opacity: 1;
+}
+
+.slide .content h1 {
+    margin-bottom: 10px;
+}
+
+.slide.current .content {
+    opacity: 1;
+    transform: translateX(600px);
+    transition: all 1s ease-in-out .5s;
+}
+
+/* button */
+button {
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    cursor: pointer;
+    padding: 13px 15px;
+    border-radius: 50%;
+    outline: none;
+    font-size: 1.5rem;
+}
+
+button:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+.btn #prev {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+}
+
+.btn #next {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+}
+
+@media (max-width: 500px) {
+    .slide .content {
+        bottom: -300px;
+        left: 0;
+        width: 100%;
+    }
+
+    .slide.current .content {
+        transform: translateY(-300px);
+    }
+}
