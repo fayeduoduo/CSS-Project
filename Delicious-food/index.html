@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.bootcss.com/font-awesome/5.12.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Delicious Food</title>
+</head>
+<body>
+    <div id="flash">
+        <img src="./img/logo.png" alt="">
+        <p>Delicious Food</p>
+    </div>
+    <div class="content">
+        <header class="app-header">
+            <div class="container">
+                <img src="./img/logo.png" alt="">
+                <p>Delicious Food</p>
+                <input type="search" class='search' name="" id="" placeholder="Search...">
+            </div>
+        </header>
+        <div class="subheader">
+            <div>
+               <p>Deliver information</p>
+               <p>Click on the deliver progress & check deliver status...<i class="fas fa-chevron-right"></i></p>                
+            </div>
+            <img src="./img/delivery.png" alt="">
+        </div>
+        <div class="grid container">
+            <div class="item">
+                <h4>Hot Pot</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil, corrupti...</p>
+                <img src="./img/hot-pot.png" alt="">
+            </div>
+            <div class="item">
+                <h4>Barbecue</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil, corrupti...</p>
+                <img src="./img/barbecue.png" alt="">
+            </div>
+            <div class="item">
+                <h4>SeaFood</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil, corrupti...</p>
+                <img src="./img/seafood.png" alt="">
+            </div>
+            <div class="item">
+                <h4>Fast Food</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas omnis cum dolore eos, quisquam tempore?</p>
+                <img src="./img/fast-food.png" alt="">
+            </div>
+            <div class="item">
+                <h4>Aftnoon Tea</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad ut quibusdam sit aspernatur autem tempore, obcaecati consequuntur iusto?</p>
+                <img src="./img/afternoon-tea.png" alt="">
+            </div>
+            <div class="item">
+                <h4>Western Cuisine</h4>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum facere qui consectetur.</p>
+                <img src="./img/western-food.png" alt="">
+            </div>
+        </div>
+    </div>
+    <footer class="app-footer">
+        <ul>
+            <li><i class="fas fa-heart"></i>收藏</li>
+            <li> <i class="fas fa-cart-arrow-down"></i>订单</li>
+            <li><i class="fas fa-user-alt"></i>我的</li>
+            <li><i class="fas fa-map-marker-alt"></i>附近</li>
+        </ul>
+    </footer>
+    <script>
+        setTimeout(function(){
+            flash.classList.add('fade')
+        }, 2000)
+    </script>
+</body>
+</html>
