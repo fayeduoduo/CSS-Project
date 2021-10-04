@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.8rem;
+    color: #333;
+}
+
+.pimg1,
+.pimg2,
+.pimg3,
+.pimg4 {
+    position: relative;
+    opacity: 0.7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pimg1 {
+    background: url('./img/bg-1.jpg') no-repeat center center/cover;
+    min-height: 100%;
+    background-attachment: fixed;
+}
+
+.pimg2 {
+    background: url('./img/bg-2.jpg') no-repeat center center/cover;
+    min-height: 400px;
+    background-attachment: fixed;
+}
+
+.pimg3 {
+    background: url('./img/bg-3.jpg') no-repeat center center/cover;
+    min-height: 400px;
+    background-attachment: fixed;
+}
+
+.pimg4 {
+    background: url('./img/bg-4.jpg') no-repeat center center/cover;
+    min-height: 100%;
+    background-attachment: fixed;
+}
+
+.ptext span {
+    color: #000;
+    font-size: 2rem;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+.pimg1 span,
+.pimg4 span {
+    background: #111;
+    color: #fff;
+    padding: 20px;
+    border-radius: 3px;
+}
+
+.section {
+    text-align: center;
+    padding: 50px 80px;
+}
+
+.section-light {
+    background-color: #f4f4f4;
+    color: #666;
+}
+
+.section-dark {
+    background-color: #282e34;
+    color: #ddd;
+}
+
+@media (max-width: 500px) {
+
+    .pimg1,
+    .pimg2,
+    .pimg3,
+    .pimg4 {
+        background-attachment: scroll;
+    }
+}
