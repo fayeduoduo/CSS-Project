@@ -1,0 +1,222 @@
+:root {
+    --primary-color: #ff4b2b;
+    --secondary-color: #ff416c;
+}
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f6f5f7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    margin: 0;
+}
+
+p {
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    margin: 20px 0 30px;
+}
+
+span {
+    font-size: 12px;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    margin: 15px 0;
+}
+
+
+/* app-page setting */
+.app-page {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+}
+
+.form-container form {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+form .icon-show {
+    margin: 10px 0;
+}
+
+form .icon-show a {
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5px;
+    height: 40px;
+    width: 40px;
+}
+
+.form-container form input {
+    background-color: #eee;
+    border: none;
+    padding: 12px 15px;
+    margin: 5px 0;
+    width: 100%;
+}
+
+button {
+    border-radius: 20px;
+    border: 1px solid var(--primary-color);
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 12px;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: transform 80ms ease-in;
+}
+
+button:active {
+    transform: scale(0.9);
+}
+
+button:focus {
+    outline: none;
+}
+
+button.btn {
+    background-color: transparent;
+    border-color: #fff;
+}
+
+.form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transform: all .6s ease-out;
+}
+
+
+/* sign in */
+.signIn-container {
+    left: 0;
+    width: 50%;
+    z-index: 2;
+    transition: all .5s ease;
+}
+
+/* sign up */
+.signUp-container {
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+    transition: all .5s ease;
+}
+
+/* overlay */
+.overlay-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform .6s ease-in-out;
+    z-index: 99;
+}
+
+.overlay {
+    background-color: var(--primary-color);
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color)) no-repeat 0 0/cover;
+    color: #fff;
+    height: 100%;
+    width: 200%;
+    position: relative;
+    left: -100%;
+    transform: translateX(0);
+    transition: transform .6s ease-in-out;
+}
+
+.overlay-panel {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+    padding: 0 40px;
+    text-align: center;
+    transform: translateX(0);
+    transition: transform .6s ease-in-out;
+}
+
+.overlay-right {
+    right: 0;
+    transform: translateX(0);
+}
+
+.overlay-left {
+    /* 满足文本动态效果 */
+    transform: translateX(-20%);
+}
+
+
+/* animation */
+/* move signIn to right */
+.app-page.right-panel-active .signIn-container {
+    transform: translateX(100%);
+}
+
+/* move overlay to left */
+.app-page.right-panel-active .overlay-container {
+    transform: translateX(-100%);
+}
+
+/* bring sign up over sign in */
+.app-page.right-panel-active .signUp-container {
+    opacity: 1;
+    z-index: 5;
+    transform: translateX(100%);
+}
+
+/* mover overlay back to left*/
+.app-page.right-panel-active .overlay {
+    transform: translateX(50%);
+}
+
+.app-page.right-panel-active .overlay-left {
+    transform: translateX(0);
+}
+
+.app-page.right-panel-active .overlay-right {
+    transform: translateX(20%)
+}
