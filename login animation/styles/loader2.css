@@ -1,0 +1,20 @@
+#loader {
+    font-family: 'ZCOOL KuaiLe', cursive;
+    font-size: 40px;
+    color: palevioletred;
+}
+
+#loader:after {
+    content: '...';
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: bottom;
+    animation: dots steps(4, end) 2s infinite;
+    width: 0;
+}
+
+@keyframes dots {
+    to {
+        width: 1em;
+    }
+}
